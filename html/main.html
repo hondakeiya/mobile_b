@@ -10,7 +10,7 @@
             document.fgColor = "#E0E0E0";//文字の色変更
         </script>
         
-      <img id="bcg" src="../a.jpeg">
+      <img id="bcg" src="../images/a.jpeg">
       <div id="msg"></div>
         <form id="fl">
           <input type="submit" value="xxx" id="choice1" onclick="change_scenario(0);return false"><br>
@@ -40,7 +40,7 @@
           document.forms.fl.choice1.value = data[id][3];
           document.forms.fl.choice2.value = data[id][5];
           document.forms.fl.choice3.value = data[id][7];
-          bcg.src = "../"+data[id][8]
+          bcg.src = "../images"+data[id][8]
           goto[0]=data[id][2];
           goto[1]=data[id][4];
           goto[2]=data[id][6];
