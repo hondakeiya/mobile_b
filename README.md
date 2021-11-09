@@ -1,2 +1,3 @@
 # mobile_b
-mobilebのgit
+mobilebのgitだよ。
+羊
