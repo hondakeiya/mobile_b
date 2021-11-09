@@ -1,2 +1,2 @@
 # mobile_b
-mobilebのgitだよ。
+mobilebのgit
