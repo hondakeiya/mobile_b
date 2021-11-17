@@ -54,6 +54,24 @@
         </script>
       -->
         <script>
+
+          class Status{
+            constructor(dearness, hunger, cleanliness){
+              this.dearness = dearness;
+              this.hunger = hunger;
+              this.cleanliness = cleanliness;
+            }
+            get statusUp(){
+              this.dearness += 1;
+              this.hunger += 1;
+              this.cleanliness += 1;
+              return this.dearness, this.hunger, this.cleanliness;
+            }
+          }
+
+          const hitujidate = new Status(0, 0, 0); // 羊の内部値の初期値
+          console.log(Status.statusUp());         // 1, 1, 1
+
           var current_id=0;
           var current_data=[];
           var scinario_data=[
@@ -188,7 +206,7 @@
           disp_scenario();
 
           function disp_scenario(){
-            var result = scinario_data.filter(function(value){
+            var result = scinario_data.filter(function(value){//filter id=current_id
               if (value.id==current_id) return true;
             })
             if(result.length==0){return;}
@@ -201,14 +219,14 @@
               document.forms.fl.choice2.style.visibility = "visible";
             }else{
               document.forms.fl.choice2.style.visibility = "hidden";
-            }if (current_data.choice.length>=3){
+            }if (current_data.choice.length>=3){//この条件なる？
               document.forms.fl.choice3.value = current_data.choice[2].text;
               document.forms.fl.choice3.style.visibility = "visible";
             }else{
               document.forms.fl.choice3.style.visibility = "hidden";
             }
             bcg.src = "../images/"+current_data.img;
-        }
+          }
 
          function change_scenario(selectno) {
            current_id = current_data.choice[selectno].goto;
