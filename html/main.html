@@ -61,16 +61,23 @@
               this.hunger = hunger;
               this.cleanliness = cleanliness;
             }
-            get statusUp(){
-              this.dearness += 1;
-              this.hunger += 1;
-              this.cleanliness += 1;
-              return this.dearness, this.hunger, this.cleanliness;
+            get dearnessUp(riseValue){//好感度増減
+              return this.statusUp(this.dearness, riseValue);
+            }
+            get hungerUp(riseValue){//空腹度増減
+              return this.statusUp(this.hunger, riseValue);
+            }
+            get cleanlinessUp(riseValue){//清潔度増減
+              return this.statusUp(this.cleanliness, riseValue);
+            }
+            statusUp(status, riseValue){
+              status += riseValue;
+              return status;
             }
           }
 
-          const hitujidate = new Status(0, 0, 0); // 羊の内部値の初期値
-          console.log(Status.statusUp());         // 1, 1, 1
+          const hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
+          console.log(Status.dearnessUp(1));// 1
 
           var current_id=0;
           var current_data=[];
