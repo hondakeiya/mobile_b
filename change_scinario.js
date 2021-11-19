@@ -39,7 +39,7 @@ function disp_scenario(){
     input2.setAttribute("value", "初期表示");
     hituji_name = window.prompt("羊の名前を入力してください", "");
   }
-  //入力した羊の名前でシナリオ内の仮称くっちーを置き換えたいけどうまくいかない
+  //入力した羊の名前でシナリオ内の仮称くっちーを置き換えたいけどうまくいった
   if(current_data.id>4){
     current_data.msg = current_data.msg.replace("くっちー", hituji_name);
   }
