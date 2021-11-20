@@ -50,3 +50,27 @@ function change_scenario(selectno) {
    current_id = current_data.choice[selectno].goto;
    disp_scenario();
 }
+
+class Status{
+  constructor(dearness, hunger, cleanliness){
+    this.dearness = dearness;
+    this.hunger = hunger;
+    this.cleanliness = cleanliness;
+  }
+  get dearnessUp(riseValue){//好感度増減
+    return this.statusUp(this.dearness, riseValue);
+  }
+  get hungerUp(riseValue){//空腹度増減
+    return this.statusUp(this.hunger, riseValue);
+  }
+  get cleanlinessUp(riseValue){//清潔度増減
+    return this.statusUp(this.cleanliness, riseValue);
+  }
+  statusUp(status, riseValue){
+    status += riseValue;
+    return status;
+  }
+}
+
+const hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
+console.log(Status.dearnessUp(1));// 1
