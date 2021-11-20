@@ -7,48 +7,48 @@
         <script src="../change_scinario.js" defer></script>
       </head>
     <body>
-        <script type="text/javascript">//背景色変更と文字色の変更
-            document.bgColor = "#202020";//背景色変更
-            document.fgColor = "#E0E0E0";//文字の色変更
-        </script>
+      <script type="text/javascript">//背景色変更と文字色の変更
+        document.bgColor = "#202020";//背景色変更
+        document.fgColor = "#E0E0E0";//文字の色変更
+      </script>
         
-      <img id="bcg" src="../images/a.jpeg">
-      <div id="msg"></div>
-        <form id="fl">
-          <input type="submit" value="xxx" id="choice1" onclick="change_scenario(0);return false"><br>
-          <input type="submit" value="xxx" id="choice2" onclick="change_scenario(1);return false"><br>
-          <input type="submit" value="xxx" id="choice3" onclick="change_scenario(2);return false"><br>
-        </form>
+      <img id="bcg" src="../images/a.jpeg"><br>
+      <div id="msg" class="text"></div>
+      <form id="fl">
+        <input type="submit" value="xxx" id="choice1" onclick="change_scenario(0);return false"><br>
+        <input type="submit" value="xxx" id="choice2" onclick="change_scenario(1);return false"><br>
+        <input type="submit" value="xxx" id="choice3" onclick="change_scenario(2);return false"><br>
+      </form>
         
-        <div id="change_scene"></div>
+      <div id="change_scene"></div>
         
 
-        <script>
+      <script>
 
-          class Status{
-            constructor(dearness, hunger, cleanliness){
-              this.dearness = dearness;
-              this.hunger = hunger;
-              this.cleanliness = cleanliness;
-            }
-            get dearnessUp(riseValue){//好感度増減
-              return this.statusUp(this.dearness, riseValue);
-            }
-            get hungerUp(riseValue){//空腹度増減
-              return this.statusUp(this.hunger, riseValue);
-            }
-            get cleanlinessUp(riseValue){//清潔度増減
-              return this.statusUp(this.cleanliness, riseValue);
-            }
-            statusUp(status, riseValue){
-              status += riseValue;
-              return status;
-            }
+        class Status{
+          constructor(dearness, hunger, cleanliness){
+            this.dearness = dearness;
+            this.hunger = hunger;
+            this.cleanliness = cleanliness;
           }
+          get dearnessUp(riseValue){//好感度増減
+            return this.statusUp(this.dearness, riseValue);
+          }
+          get hungerUp(riseValue){//空腹度増減
+            return this.statusUp(this.hunger, riseValue);
+          }
+          get cleanlinessUp(riseValue){//清潔度増減
+            return this.statusUp(this.cleanliness, riseValue);
+          }
+          statusUp(status, riseValue){
+            status += riseValue;
+            return status;
+          }
+        }
 
-          const hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
-          console.log(Status.dearnessUp(1));// 1
-        </script>
+        const hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
+        console.log(Status.dearnessUp(1));// 1
+      </script>
 
     </body>
 </html>
