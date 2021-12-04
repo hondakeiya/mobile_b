@@ -18,10 +18,10 @@ class Status{
         this.dearness = dearness;
     }
     set setHunger(hunger){
-        this.hunger = this.hunger;
+        this.hunger = hunger;
     }
-    set setCleanliness(){
-        this.cleanliness = this.cleanliness;
+    set setCleanliness(cleanlines){
+        this.cleanliness = cleanliness;
     }
 }
   
