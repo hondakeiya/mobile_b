@@ -12,6 +12,7 @@ function disp_scenario(){
   if(result.length==0){return;}
 
   current_data=result[0];
+  //選択肢を増やしたり減らしたり
   document.forms.fl.choice1.value = current_data.choice[0].text;
   if(current_data.choice.length>=2){
     document.forms.fl.choice2.value = current_data.choice[1].text;
@@ -24,8 +25,9 @@ function disp_scenario(){
   }else{
     document.forms.fl.choice3.style.visibility = "hidden";
   }
+  //背景
   bcg.src = "../images/"+current_data.img;
-
+  //プレイヤーの名前入力
   if (current_data.id == 2){
     const input1 = document.createElement("input");
     input1.setAttribute("type", "text");
@@ -33,20 +35,22 @@ function disp_scenario(){
     player_name = window.prompt("ユーザー名を入力してください", "");
     current_data.msg = "なるほど!"+player_name+"というんだな！次に初めてふれる羊の名前を教えてくれ!";
   }
+  //ヒツジの名前入力
   if(current_data.id == 3){
     const input2 = document.createElement("input");
     input2.setAttribute("type", "text");
     input2.setAttribute("value", "初期表示");
     hituji_name = window.prompt("羊の名前を入力してください", "");
   }
-  //入力した羊の名前でシナリオ内の仮称くっちーを置き換えたいけどうまくいった
+
+  //入力した羊の名前でシナリオ内の仮称くっちーを置き換えたいけどうまくいったと思ったらうまく行ってなかった
   if(current_data.id>4){
-    current_data.msg = current_data.msg.replace("くっちー", hituji_name);
+    current_data.msg = current_data.msg.replace(/くっちー/, hituji_name);
   }
   msg.innerHTML = current_data.msg;
 }
-
+//話の切り替え
 function change_scenario(selectno) {
-   current_id = current_data.choice[selectno].goto;
-   disp_scenario();
+  current_id = current_data.choice[selectno].goto;
+  disp_scenario();
 }

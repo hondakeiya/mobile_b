@@ -11,11 +11,13 @@ class Status{
     }
 
     HungerUp(){
-      var status = this.hunger + 1;
+      return this.hunger += 1;
+      
     }
 
     CleanlinessUp(){
-      this.cleanliness;
+      return this.cleanliness += 1;
+      
     }
 
     //getterとsetter
@@ -41,5 +43,7 @@ class Status{
   
 var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
 
-hitujidate.setDearness = 100;
-console.log(hitujidate.getDearness);//101
+
+if(current_data.id==4){
+  console.log("成功")
+}
