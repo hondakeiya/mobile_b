@@ -7,21 +7,20 @@ class Status{
 
     //関数(gettr,sette呼び出し)
     DearnessUp(){
-      return this.dearness+=1;
+      return this.dearness += 1;
     }
 
     HungerUp(){
-      this.hunger;
-      set.this.hunger += 1;
+      var status = this.hunger + 1;
     }
 
     CleanlinessUp(){
       this.cleanliness;
-      set.this.cleanliness += 1;
     }
+
     //getterとsetter
     get getDearness(){
-      return this.dearness;
+      return this.DearnessUp();
     }
     get getHunger(){
       return this.hunger;
@@ -41,8 +40,6 @@ class Status{
 }
   
 var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
-console.log(hitujidate.dearness)//0
 
 hitujidate.setDearness = 100;
-console.log(hitujidate.DearnessUp());//101
-console.log(hitujidate.DearnessUp());//102
+console.log(hitujidate.getDearness);//101
