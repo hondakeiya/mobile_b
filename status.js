@@ -35,7 +35,7 @@ class Status{
     set setHunger(hunger){
         this.hunger = hunger;
     }
-    set setCleanliness(cleanlines){
+    set setCleanliness(cleanliness){
         this.cleanliness = cleanliness;
     }
 }
