@@ -2,6 +2,8 @@ document.getElementById("change_scene")
 var current_id=0;
 var current_data=[];
 var target = "くっちー"
+var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
+var music = new Audio("../n37.mp3");
 
 disp_scenario();
 
@@ -12,6 +14,7 @@ function disp_scenario(){
   if(result.length==0){return;}
 
   current_data=result[0];
+
   //選択肢を増やしたり減らしたり
   document.forms.fl.choice1.value = current_data.choice[0].text;
   if(current_data.choice.length>=2){
@@ -27,6 +30,11 @@ function disp_scenario(){
   }
   //背景
   bcg.src = "../images/"+current_data.img;
+  //音楽は流れるけどボタン押すたびに再生される上に毎回初めから流れる
+  music.src = "../"+current_data.audio;
+  music.volume=0.1;
+  music.play();
+  
   //プレイヤーの名前入力
   if (current_data.id == 2){
     const input1 = document.createElement("input");
@@ -43,14 +51,31 @@ function disp_scenario(){
     hituji_name = window.prompt("羊の名前を入力してください", "");
   }
 
-  //入力した羊の名前でシナリオ内の仮称くっちーを置き換えたいけどうまくいったと思ったらうまく行ってなかった
+  //入力した羊の名前でシナリオ内の仮称くっちーを置き換えたいけどうまくいった
   if(current_data.id>4){
-    current_data.msg = current_data.msg.replace(/くっちー/, hituji_name);
+    current_data.msg = current_data.msg.replace(/くっちー/g, hituji_name);
   }
   msg.innerHTML = current_data.msg;
+
+  //ここでステータス変化とシナリオ変更する方法しか思いつかなかった(関数にしたかったけどできなかった)
+  if(current_data.id==1){
+    console.log(hitujidate)
+  }else if(current_data.id==2){
+    hitujidate.getDearness
+    console.log(hitujidate)
+  }
+
+  if (hitujidate.dearness==1){
+    console.log("hello")
+  }
 }
+
 //話の切り替え
 function change_scenario(selectno) {
   current_id = current_data.choice[selectno].goto;
   disp_scenario();
+}
+
+function pause_music(){
+  music.pause();
 }

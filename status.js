@@ -5,19 +5,16 @@ class Status{
       this.cleanliness = cleanliness;
     }
 
-    //関数(gettr,sette呼び出し)
     DearnessUp(){
       return this.dearness += 1;
     }
 
     HungerUp(){
       return this.hunger += 1;
-      
     }
 
     CleanlinessUp(){
       return this.cleanliness += 1;
-      
     }
 
     //getterとsetter
@@ -39,11 +36,4 @@ class Status{
     set setCleanliness(cleanliness){
         this.cleanliness = cleanliness;
     }
-}
-  
-var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
-
-
-if(current_data.id==4){
-  console.log("成功")
 }

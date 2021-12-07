@@ -3,6 +3,7 @@ var scinario_data = [
         "id": 0,
         "msg": "初めまして！<br>ポケモンマスター羊の世界へようこそ！",
         "img": "hituji2.jpg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 1,
@@ -14,6 +15,7 @@ var scinario_data = [
         "id": 1,
         "msg": "まずは君の名前を教えてくれ",
         "img": "a.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 2,
