@@ -25,6 +25,7 @@ var scinario_data = [
         "id": 2,
         "msg": "なるほど!player_nameというんだな！次に初めてふれる羊の名前を教えてくれ!",
         "img": "a.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 3,
@@ -36,6 +37,8 @@ var scinario_data = [
         "id": 3,
         "msg": "これから君の冒険の始まりだ！<br>それでは, 夢と冒険と！<br>ポケモンの世界へ！",
         "img": "a.jpeg",
+        "audio":"n37.mp3",
+
         "choice": [
             {
                 "goto": 4,
@@ -47,6 +50,7 @@ var scinario_data = [
         "id": 4,
         "msg": "4月1週目<br><br>snsで羊を飼育することが流行する。その理由は、人によって育成した子羊が変わるからだ。なぜこのような話をするかというと、今日山の麓で羊を拾ったからだ。",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 5,
@@ -58,6 +62,7 @@ var scinario_data = [
         "id": 5,
         "msg": "くっちーは",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 6,
@@ -77,6 +82,7 @@ var scinario_data = [
         "id": 6,
         "msg": "とりあえず、家に連れて帰って面倒を見てみる事にした。くっちーには動物病院で渡された餌とミルクを与えることにした。",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 7,
@@ -96,6 +102,7 @@ var scinario_data = [
         "id": 7,
         "msg": "くっちーは美味しそうに餌を食べている",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 9,
@@ -107,6 +114,7 @@ var scinario_data = [
         "id": 8,
         "msg": "くっちーは嫌そうに餌を食べている",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 9,
@@ -118,6 +126,7 @@ var scinario_data = [
         "id": 9,
         "msg": "4月3週目<br>くっちーは二週間たった今、元気を取り戻したようだ。くっちーは",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto": 10,
@@ -129,6 +138,7 @@ var scinario_data = [
         "id": 10,
         "msg": "今日はくっちーを散歩に連れて行った。まずは散歩する道を覚えて欲しいし、他の人に会って怯えて欲しく無いので、散歩は夜に行った。",
         "img": "首.jpeg",
+        "audio":"n37.mp3",
         "choice": [
             {
                 "goto":4,
