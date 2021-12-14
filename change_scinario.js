@@ -1,9 +1,11 @@
-document.getElementById("change_scene")
+document.getElementById("change_scene");
+var audio = document.getElementById("music");
+audio.volume = 0.01;
 var current_id=0;
 var current_data=[];
-var target = "くっちー"
+var target = "くっちー";
 var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
-var music = new Audio("../n37.mp3");
+//var music = new Audio("../n37.mp3");
 
 disp_scenario();
 
@@ -31,9 +33,7 @@ function disp_scenario(){
   //背景
   bcg.src = "../images/"+current_data.img;
   //音楽は流れるけどボタン押すたびに再生される上に毎回初めから流れる
-  music.src = "../"+current_data.audio;
-  music.volume=0.1;
-  music.play();
+  audio.src = "../"+current_data.audio;
   
   //プレイヤーの名前入力
   if (current_data.id == 2){
@@ -76,6 +76,8 @@ function change_scenario(selectno) {
   disp_scenario();
 }
 
-function pause_music(){
-  music.pause();
+
+function save(){
+  save_id = current_data.id
+  console.log(save_id);
 }
