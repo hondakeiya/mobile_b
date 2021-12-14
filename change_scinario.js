@@ -8,6 +8,7 @@ var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
 //var music = new Audio("../n37.mp3");
 
 disp_scenario();
+audio.src = "../"+current_data.audio;
 
 function disp_scenario(){
   var result = scinario_data.filter(function(value){
@@ -33,7 +34,7 @@ function disp_scenario(){
   //背景
   bcg.src = "../images/"+current_data.img;
   //音楽は流れるけどボタン押すたびに再生される上に毎回初めから流れる
-  audio.src = "../"+current_data.audio;
+  //audio.src = "../"+current_data.audio;
   
   //プレイヤーの名前入力
   if (current_data.id == 2){
@@ -75,7 +76,6 @@ function change_scenario(selectno) {
   current_id = current_data.choice[selectno].goto;
   disp_scenario();
 }
-
 
 function save(){
   save_id = current_data.id
