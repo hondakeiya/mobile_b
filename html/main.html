@@ -6,12 +6,26 @@
         <script src="../scinario.json.js" defer></script>
         <script src="../status.js" defer></script>
         <script src="../change_scinario.js" defer></script>
+        <script src="../menu.js" defer></script>
       </head>
     <body>
       <script type="text/javascript">//背景色変更と文字色の変更
         document.bgColor = "#202020";//背景色変更
         document.fgColor = "#E0E0E0";//文字の色変更
       </script>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="#">セーブボタン</a></li>
+          <li><a href="#">音量調整</a></li>
+          <li><a href="#">ヒツジ</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger">
+        <span class="inner_line" id="line1"></span>
+        <span class="inner_line" id="line2"></span>
+        <span class="inner_line" id="line3"></span>
+      </div>
 
       <audio id="music" autoplay src="../n37.mp3" loop="infinite"></audio>
       <img id="bcg" src="../images/a.jpeg"><br>

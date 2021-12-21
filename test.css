@@ -35,3 +35,99 @@ font-size:200%;
 @font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v16/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");unicode-range:U+0100-024f,U+1e??,U+20a0-20ab,U+20ad-20cf,U+2c60-2c7f,U+a720-a7ff}
 @font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format("woff2");unicode-range:U+00??,U+0131,U+0152-0153,U+02c6,U+02da,U+02dc,U+2000-206f,U+2074,U+20ac,U+2212,U+2215}a,address,article,aside,audio,b,big,blockquote,body,canvas,caption,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,label,legend,li,main,mark,menu,nav,ol,output,p,pre,q,s,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;line-height:1.15}h1{font-size:2em;margin:.67em 0}a{background-color:transparent;-webkit-text-decoration-skip:objects}b,strong{font-weight:bolder}small{font-size:80%}figure{margin:1em 40px}img{border-style:none}[type=button],[type=reset],[type=submit],button{cursor:pointer}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto}[hidden]{display:none!important}[clear]{clear:both}::selection{background:#b3d4fc;text-shadow:none}*,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}:root{--main-bg-color:#fff}section{background:#fff}main h1{font-family:Roboto,sans-serif}header{display:inline-block;width:100%;background:#000}header nav{float:right}header nav li{float:left;margin-left:10px}section.example{width:100%}.example .cards{display:inline-block;margin-bottom:-4px}.example article{float:left}footer{display:block;width:100%}
 @media print{*,:after,:before,:first-letter,:first-line{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999}blockquote,img,pre{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+header {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  background: #000000;
+}
+#nav{
+  position: absolute;
+  height: 100vh;
+  width: 40%;
+  left: -40%;
+  top: 0;
+  background: #ffffff;
+  transition: .7s;
+}
+#nav ul{
+  padding-top: 80px;
+}
+#nav ul li{
+  list-style-type: none;
+  font-size: 20px;
+}
+#nav a{
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 15px;
+  padding: 10px;
+  transition: .5s;
+}
+#nav li a:hover{
+  color: #ffffff;
+  background: #cd5c5c;
+  border-bottom: none;
+}
+#hamburger {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 50px;
+  height: 44px;
+  cursor: pointer;
+  transition: 1s;
+}
+.inner_line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: 1s;
+  border-radius: 4px;
+}
+#line1 {
+  top: 0;
+}
+#line2 {
+  top: 20px;
+}
+#line3 {
+  bottom: 0px;
+}
+p {
+  padding-top: 200px;
+  text-align: center;
+}
+.in{
+  transform: translateX(100%);
+}
+.line_1,.line_2,.line_3{
+  background: #000000;
+}
+.line_1 {
+  transform: translateY(20px) rotate(-45deg);
+  top: 0;
+}
+.line_2 {
+  opacity: 0;
+}
+.line_3 {
+  transform: translateY(-20px) rotate(45deg);
+  bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  #nav ul li {
+    font-size: 14px;
+  }
+}
