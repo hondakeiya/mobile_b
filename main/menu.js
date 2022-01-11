@@ -7,3 +7,8 @@ function hamburger() {
 document.getElementById('hamburger').addEventListener('click' , function () {
   hamburger();
 } );
+
+
+//document.getElementById("line3").addEventListener("click", function() {
+  //window.location.href = 'savepage.html';
+//});
