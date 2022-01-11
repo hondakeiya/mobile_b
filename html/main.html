@@ -20,7 +20,8 @@
       <nav id="nav"><!--ハンバーガーの中身-->
         <ul>
           <li><a href="#">セーブボタン</a></li>
-          <li><a href="#">音量調整</a></li>
+          <li><a href="#" id="slide_volume">音量調整</a></li>
+          <div><input type="range" id="volume" value="0.5" min="0.0" max="1.0" step="0.1"></div>
           <li><a href="#" onclick="window.location.href = 'savepage.html'">はじめの画面に</a></li>
         </ul>
       </nav>
@@ -30,11 +31,12 @@
         <span class="inner_line" id="line2"></span>
         <span class="inner_line" id="line3"></span>
       </div>
-
       <audio id="music" autoplay src="../n37.mp3" loop="infinite"></audio>
-      <div class="box" id="bgImage"><img id="hitujiImage" src="../images/hituji0.png"></div>
+
+      <div class="box" id="bgImage"><img id="hitujiImage" src="../images/nc.jpg"></div>
 
       <div id="msg" class="text"></div>
+
       <form id="fl">
         <input type="submit" value="xxx" id="choice1" onclick="change_scenario(0);return false; pause_music()"><br>
         <input type="submit" value="xxx" id="choice2" onclick="change_scenario(1);return false; pause_music()"><br>

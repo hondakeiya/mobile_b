@@ -1,6 +1,4 @@
 document.getElementById("change_scene");
-var audio = document.getElementById("music");
-audio.volume = 0.01;
 var current_id=0;
 var current_data=[];
 var target = "くっちー";
@@ -32,7 +30,7 @@ function disp_scenario(){
   }
   //背景
   //bcg.src = "../images/"+current_data.img;
-  bgImage.style.backgroundImage = 'url("../images/' + current_data.img + '")';
+  bgImage.style.backgroundImage = 'url("../images/' + current_data.bgimg + '")';
 
   //プレイヤーの名前入力
   if (current_data.id == 2){
