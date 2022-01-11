@@ -2,7 +2,7 @@ var scinario_data = [
     {
         "id": 0,
         "msg": "初めまして！<br>ポケモンマスター羊の世界へようこそ！",
-        "img": "hituji_touka.png",
+        "img": "yama.png",
         "audio":"n37.mp3",
         "choice": [
             {
