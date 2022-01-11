@@ -3,41 +3,45 @@
     <head>
         <link rel="stylesheet" href="../test.css"><br />    
         <meta http-equiv="content-type" charset="UTF-8">
-        <script src="../scinario.json.js" defer></script>
-        <script src="../status.js" defer></script>
-        <script src="../change_scinario.js" defer></script>
-        <script src="../menu.js" defer></script>
+        <script src="../main/scinario.json.js" defer></script>
+        <script src="../main/status.js" defer></script>
+        <!--<script src="../main/test.js" defer></script>-->
+        <script src="../main/change_scinario.js" defer></script>
+        <script src="../main/menu.js" defer></script>
       </head>
     <body>
+      <!--
       <script type="text/javascript">//背景色変更と文字色の変更
         document.bgColor = "#202020";//背景色変更
         document.fgColor = "#E0E0E0";//文字の色変更
       </script>
+    -->
 
-      <nav id="nav">
+      <nav id="nav"><!--ハンバーガーの中身-->
         <ul>
           <li><a href="#">セーブボタン</a></li>
           <li><a href="#">音量調整</a></li>
           <li><a href="#">ヒツジ</a></li>
         </ul>
       </nav>
-      <div id="hamburger">
+
+      <div id="hamburger"><!--ハンバーガー描画-->
         <span class="inner_line" id="line1"></span>
         <span class="inner_line" id="line2"></span>
         <span class="inner_line" id="line3"></span>
       </div>
 
       <audio id="music" autoplay src="../n37.mp3" loop="infinite"></audio>
-      <img id="bcg" src="../images/a.jpeg"><br>
+      <div class="box" id="bgImage"><img id="hitujiImage" src="../images/hituji0.png"></div>
+
       <div id="msg" class="text"></div>
       <form id="fl">
         <input type="submit" value="xxx" id="choice1" onclick="change_scenario(0);return false; pause_music()"><br>
         <input type="submit" value="xxx" id="choice2" onclick="change_scenario(1);return false; pause_music()"><br>
         <input type="submit" value="xxx" id="choice3" onclick="change_scenario(2);return false; pause_music()"><br>
       </form>
-
-      <input type="button" value="セーブボタン" onclick="save()" class="save">
-        
       <div id="change_scene"></div>
     </body>
 </html>
+
+<!--<img id="bcg" src="../images/yama.png" width="600" height="300"　alt="">-->
