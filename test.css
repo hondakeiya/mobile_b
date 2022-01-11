@@ -91,7 +91,7 @@ header {
   left: 0;
   width: 50px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #000;
   transition: 1s;
   border-radius: 4px;
 }
