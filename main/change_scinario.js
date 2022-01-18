@@ -1,14 +1,13 @@
 document.getElementById("change_scene");
 var current_id=0;
 var current_data=[];
-var target = "くっちー";
 var hitujidate = new Status(0, 0, 0);// 羊の内部値の初期値
 
 disp_scenario();
-audio.src = "../"+current_data.audio;
+//audio.src = "../"+current_data.audio;
 
 function disp_scenario(){
-  var result = scinario_data.filter(function(value){
+  const result = scinario_data.filter(function(value){
     if (value.id==current_id) return true;
   })
   if(result.length==0){return;}
@@ -29,7 +28,6 @@ function disp_scenario(){
     document.forms.fl.choice3.style.visibility = "hidden";
   }
   //背景
-  //bcg.src = "../images/"+current_data.img;
   bgImage.style.backgroundImage = 'url("../images/' + current_data.bgimg + '")';
 
   //プレイヤーの名前入力
@@ -74,18 +72,13 @@ function change_scenario(selectno) {
 }
 
 function saveData(){
-  var hoge = document.getElementById("hoge");
   localStorage.clear();
-
-  localStorage.left = hoge.style.left;
-  localStorage.top = hoge.style.top;
+  localStorage.id = current_id;
 
   alert("セーブ完了！");
 }
 
 function loadData(){
-  var hoge = document.getElementById("hoge");
-
-  hoge.style.left = localStorage.left;
-  hoge.style.top = localStorage.top;
+  current_id=localStorage.id;
+  disp_scenario();
 }
